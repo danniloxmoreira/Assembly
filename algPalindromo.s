@@ -35,6 +35,7 @@
 		li $v0, 1
 		la $a0, ($t0)
 		syscall
+		add  $t0, $zero, $zero
 		
 		li $v0, 4
 		la $a0, msgPalindromo
