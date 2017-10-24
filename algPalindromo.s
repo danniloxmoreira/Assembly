@@ -17,7 +17,8 @@
 	
 		li $v0, 5
 		syscall
-		add $t0, $v0, $zero
+		add $t0, $v0, $zero		
+		
 
 		ble $t0, $zero, while1		# verifica se n <= 0
 		bgt $t0, 10000, while1		# verifica se n > 10000
@@ -35,7 +36,9 @@
 		li $v0, 1
 		la $a0, ($t0)
 		syscall
-		add  $t0, $zero, $zero
+		
+		add  $t0, $zero, $zero		# atribuí 0 ao registrador $t0
+		add  $t4, $zero, $zero		# atribuí 0 ao registrador $t4
 		
 		li $v0, 4
 		la $a0, msgPalindromo
